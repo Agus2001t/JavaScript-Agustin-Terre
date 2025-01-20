@@ -70,3 +70,145 @@ body {
   border: 0.5px solid black;
   cursor: pointer;
 }
+
+/*ESTILOS BOTONES*/
+
+.button1 {
+  display: flex;
+  margin-top: auto;
+  padding: 2px;
+  background-color: #bdc2bd;
+}
+.button2 {
+  display: flex;
+  margin-top: auto;
+  margin-left: 8px;
+  padding: 2px;
+  background-color: #bdc2bd;
+}
+.button3 {
+  display: flex;
+  margin-top: auto;
+  margin-left: 8px;
+  padding: 2px;
+  background-color: #bdc2bd;
+}
+
+/*ESTILOS INPUTS*/
+
+.inputContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Estilo para el input de tarea */
+.input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+
+
+/* Contenedor general para las tareas */
+.tasksContainer {
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+}
+
+/* Título del contenedor */
+.tasksContainer::before {
+  content: "Tareas de este día";
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  display: block;
+  text-align: center;
+  color: #333;
+}
+
+/* Estilo para cada tarea */
+.taskItem {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Estilo para el botón de eliminar */
+.deleteButton {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.deleteButton:hover {
+  background-color: #ff1a1a;
+}
+
+/* Mensaje cuando no hay tareas */
+.tasksContainer:empty::after {
+  content: "No hay tareas para este día.";
+  font-size: 1rem;
+  color: #777;
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+}
+
+/* Estilo para el botón de cerrar */
+.closeButton {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  align-self: center;
+  transition: background-color 0.3s;
+}
+
+.closeButton:hover {
+  background-color: #555;
+}
