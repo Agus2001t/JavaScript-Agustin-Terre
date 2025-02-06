@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* ESTILOS GENERALES */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -9,7 +9,7 @@ body {
   margin: 0;
 }
 
-/* Contenedor principal del calendario */
+/* CONTENEDOR PRINCIPAL DEL CALENDARIO */
 .calendar {
   background-color: #fff;
   width: 700px;
@@ -18,7 +18,7 @@ body {
   overflow: hidden;
 }
 
-/* Sección de año y mes */
+/* SECCION DEL AÑO Y MES */
 .year-month {
   display: flex;
   justify-content: space-between;
@@ -30,7 +30,7 @@ body {
   font-weight: bold;
 }
 
-/* Estilo de los días de la semana */
+/* DIAS DE LA SEMANA */
 .days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -46,7 +46,7 @@ body {
   border: 0.5px solid black;
 }
 
-/* Estilo de las fechas */
+/* FECHAS */
 .date {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -113,7 +113,7 @@ body {
   gap: 15px;
 }
 
-/* Estilo para el input de tarea */
+/* ESTILO PARA EL INPUT DE TAREA */
 .input {
   width: 100%;
   padding: 10px;
@@ -126,7 +126,7 @@ body {
 
 
 
-/* Contenedor general para las tareas */
+/* CONTENEDOR GENERAL PARA LAS TAREAS */
 .tasksContainer {
   width: 300px;
   max-height: 400px;
@@ -144,7 +144,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Título del contenedor */
+/* TITULO DEL CONTENEDOR */
 .tasksContainer::before {
   content: "Tareas de este día";
   font-weight: bold;
@@ -155,7 +155,7 @@ body {
   color: #333;
 }
 
-/* Estilo para cada tarea */
+/* ESTILO PARA CADA TAREA */
 .taskItem {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
@@ -169,7 +169,7 @@ body {
   color: #333;
 }
 
-/* Estilo para el botón de eliminar */
+/* ESTILO PARA EL BOTON DE ELIMINAR */
 .deleteButton {
   background-color: #ff4d4d;
   color: white;
@@ -185,7 +185,7 @@ body {
   background-color: #ff1a1a;
 }
 
-/* Mensaje cuando no hay tareas */
+/* MENSAJE CUANDO NO HAY TAREAS */
 .tasksContainer:empty::after {
   content: "No hay tareas para este día.";
   font-size: 1rem;
@@ -195,7 +195,7 @@ body {
   margin-top: 20px;
 }
 
-/* Estilo para el botón de cerrar */
+/* ESTILO PARA EL BOTON DE CERRAR */
 .closeButton {
   background-color: #333;
   color: white;
