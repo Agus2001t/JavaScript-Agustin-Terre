@@ -1,7 +1,12 @@
 let tasks = [];
 
-
-loadTasks();
+loadTasks()
+    .then(() => {
+        console.log('Tareas cargadas correctamente');
+    })
+    .catch((error) => {
+        console.error(error);
+    });
 
 
 let days = document.querySelectorAll('.date div');
@@ -26,9 +31,14 @@ for (const day of days) {
     }
 
 
+    const month = document.querySelector('.month');
+    const monthText = month.textContent;
+
     button1.setAttribute('data-day', day.textContent.trim());
     button2.setAttribute('data-day', day.textContent.trim());
+    button2.setAttribute('data-month', monthText);
     button3.setAttribute('data-day', day.textContent.trim());
+    button3.setAttribute('data-month', monthText);
 
 
     button1.addEventListener('click', function(event) {
@@ -39,13 +49,15 @@ for (const day of days) {
 
     button2.addEventListener('click', function(event) {
         const day = event.target.getAttribute('data-day');
-        showDeleteTasks(day);
+        const month = event.target.getAttribute('data-month');
+        showDeleteTasks(day, month);
     });
 
 
     button3.addEventListener('click', function(event) {
         const day = event.target.getAttribute('data-day');
-        showTasks(day);
+        const month = event.target.getAttribute('data-month');
+        showTasks(day, month);
     });
 }
 
