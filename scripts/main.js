@@ -11,7 +11,7 @@ loadTasks()
 
 let days = document.querySelectorAll('.date div');
 
-for (const day of days) {
+days.forEach((day) => {
     const button1 = document.createElement('button');
     const button2 = document.createElement('button');
     const button3 = document.createElement('button');
@@ -59,7 +59,7 @@ for (const day of days) {
         const month = event.target.getAttribute('data-month');
         showTasks(day, month);
     });
-}
+});
 
 
 

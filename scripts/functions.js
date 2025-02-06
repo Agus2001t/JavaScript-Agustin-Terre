@@ -10,7 +10,7 @@ function loadTasks() {
             } else {
                 reject('No hay tareas en localStorage');
             }
-        }, 2000);
+        }, 1000);
     });
 }
 
@@ -28,7 +28,7 @@ function saveTasks() {
             } catch (error) {
                 reject('Error al guardar las tareas');
             }
-        }, 2000);
+        }, 1000);
     });
 }
 
